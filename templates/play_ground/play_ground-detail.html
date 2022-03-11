@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>Details about {{ playground.name }}</h2>
+<h2>Owner: {{ playground.author }}</h2>
+<p>{{ playground.description }}</p>
+<a href="{% url 'play_ground_update' object.pk %}">+ Update Thing</a>
+<a href="{% url 'play_ground_delete' object.pk %}">+ Delete Thing</a>
+
+{% endblock content %}
